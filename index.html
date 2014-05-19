@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remark Hook</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link href="./style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<textarea id="source">
+### `Highlight in Fenced Code Block v2`
+
+```python
+!# This is what it looks like with the post hook.
+# A `highlight` in comment
+`def say_hello():`
+    print('normal line')
+    print(`'A highlighted string with quotes highlighted too'`)
+    print('`A highlighted string with quotes left out`')
+    print('(P?`<poll_id>`)/$`<pk>`', 'mulpitle ocurrences of highlight')
+    print('``hello``', 'double accent quotes are not highlighted')
+    print('\`hello\`', 'single accent quotes can be escaped')
+    `print`('highlight print function')
+    var continued_highlight = 'continued_highlight'
+!   print('\`escaped backquotes\`', `continued_highlight + 'works too'`)
+    print('first line part 1', `first_line_part_2, 'first_line_part_3')`
+    `print('second line part 1'`, second_line_part_2, 'second_line_part_3')
+    print('a_very_long_line_highlighting', `'ok, this is line 1 part 1',`
+          `'and it spreads to the second line', 'then it goes to the next'`
+          `'line'`)
+```
+</textarea>
+<script src="./remark-latest.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var slideshow = remark.create({
+      <!-- sourceUrl: 'slides.markdown', -->
+      highlightStyle: 'solarized_dark',
+      ratio: '4:3',
+      navigation: {
+        scroll: false
+      },
+  });
+</script>
+<!-- Customization -->
+<script src="./jquery-latest.min.js" type="text/javascript"></script>
+<script src="./script.js" type="text/javascript"></script>
+</body>
+</html>
