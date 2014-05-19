@@ -27,7 +27,7 @@ def say_hello():
 
 ### 2. highlighting tokens
 
-Use this format: <code><strong>`highlighted tokens`</strong></code>.
+Use this format: <strong>`` `highlighted tokens` ``</strong>.
 
     ```python
     `def` say_hello():
@@ -43,7 +43,7 @@ It will display as:
 
 ### 3. escaped back-quotes
 
-Use this format: <strong>`` `escaped back-quotes` ``</strong>.
+Use this format: <strong>`` \`escaped back-quotes\` ``</strong>.
 
 
 ### 4. customize highlighting style
