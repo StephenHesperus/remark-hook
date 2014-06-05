@@ -9,9 +9,36 @@
 h1#tile-view-header {
     margin-left: 2em;
 }
+.tile {
+    position: relative;
+    display: inline-table;
+    padding: 2em;
+    margin: 0.5em;
+    border-radius: 10px;
+}
+.tile.displayed-tile {
+    padding: 2.5em;
+    margin: 0em;
+    border-radius: 0px;
+    background: #5bc0de;
+}
+.tile.current-tile {
+    background: #f89406;
+}
+.tile:hover {
+    background: #049cdb;
+    padding: 2em;
+    margin: 0.5em;
+    border-radius: 10px;
+}
+.tile:active {
+    background: #2f96b4;
+    padding: 2em;
+    margin: 0.5em;
+    border-radius: 10px;
+}
 .tile-container {
     position: relative;
-    margin: 1em;
     float: left;
     /* border: 10px solid blueviolet; */
     /* border: 10px solid rgba(0, 33, 55, 0.5); */
