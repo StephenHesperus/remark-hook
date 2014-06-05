@@ -36,8 +36,8 @@ $(document).ready(function() {
         var slide_width = slide_scaler.width();
         var slide_height = slide_scaler.height();
         var scale = TILE_MIN_SIZE / Math.min(slide_width, slide_height);
-        var tile_container_width = slide_width * scale;
-        var tile_container_height = slide_height * scale;
+        var tile_container_width = Math.round(slide_width * scale);
+        var tile_container_height = Math.round(slide_height * scale);
 
         // loop all slides and set the scale and container
         var slides = slides_area.find('.remark-slide-container');
