@@ -42,6 +42,7 @@ $(document).ready(function() {
         // loop all slides and set the scale and container
         var slides = slides_area.find('.remark-slide-container');
         slides.each(function (index) {
+            var tile = $('<div class="tile">');
             var tile_container = $('<div class="tile-container">');
 
             tile_container.width(tile_container_width);
@@ -53,7 +54,8 @@ $(document).ready(function() {
             remark_slide_scaler.parent().addClass('remark-visible');
 
             $(this).appendTo(tile_container);
-            tile_container.appendTo(tile_view);
+            tile_container.appendTo(tile);
+            tile.appendTo(tile_view);
         });
 
         // bind click to play from here
