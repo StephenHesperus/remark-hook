@@ -17,14 +17,15 @@ $(document).ready(function() {
             tile_view.toggle();
             slide_show.toggle();
 
-            var current_slide = slide_show.find('.remark-visible');
-            var index = slide_show.find('.remark-slide-container')
-                                  .index(current_slide);
+            var index = slide_show.find('.remark-visible').index();
             var current_tile = tile_view.find('.remark-slide-container')
                                         .eq(index).parent().parent();
-            var prev_tile = tile_view.find('.current-tile');
-            if (prev_tile.length > 0)
-                prev_tile.removeClass('current-tile');
+            var displayed_tiles = tile_view.find(
+                '.remark-slide-container:lt(' + index + ')')
+                    .parent().parent();
+
+            tile_view.find('.tile').removeClass('current-tile displayed-tiles');
+            displayed_tiles.addClass('displayed-tile');
             current_tile.addClass('current-tile');
         }
     });
