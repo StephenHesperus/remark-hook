@@ -5,6 +5,9 @@
     height: 100%;
     padding: 2em;
 }
+h1#tile-view-header {
+    margin-left: 2em;
+}
 .tile-container {
     position: relative;
     margin: 1em;
