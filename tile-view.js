@@ -21,6 +21,10 @@ $(document).ready(function() {
         // min length of width and height
         var TILE_MIN_SIZE = 250;
 
+        // Set header
+        var h1 = $('<h1 id="tile-view-header">Slide Tile View Mode</h1>');
+        h1.appendTo(tile_view);
+
         // get slides
         var orig_slides_area = $('div.remark-slides-area');
         var slides_area = orig_slides_area.clone();
