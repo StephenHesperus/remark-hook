@@ -9,6 +9,14 @@ version of markdown, go and check it out.
 
 ## Features
 
+## __New Features__
+
+### Tile View Mode
+
+Tile view mode shows all slides of a slide show. Click on a slide, the
+slide show will go on from that slide. Use keyboard 'T' to toggle
+between tile view mode and play mode.
+
 ### 1. highlighting a whole line
 
 Just change the first character of the line to `!`.
