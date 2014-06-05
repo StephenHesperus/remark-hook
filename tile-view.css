@@ -4,6 +4,7 @@
     width: 100%;
     height: 100%;
     padding: 2em;
+    overflow: scroll;
 }
 h1#tile-view-header {
     margin-left: 2em;
