@@ -17,6 +17,7 @@ $(document).ready(function() {
             tile_view.toggle();
             slide_show.toggle();
 
+            // mark displayed and current tiles
             var index = slide_show.find('.remark-visible').index();
             var current_tile = tile_view.find('.remark-slide-container')
                                         .eq(index).parent().parent();
@@ -27,6 +28,7 @@ $(document).ready(function() {
             tile_view.find('.tile').removeClass('current-tile displayed-tiles');
             displayed_tiles.addClass('displayed-tile');
             current_tile.addClass('current-tile');
+            current_tile.get(0).scrollIntoView();
         }
     });
 

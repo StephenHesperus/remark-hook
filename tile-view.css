@@ -23,6 +23,9 @@ h1#tile-view-header {
     background: #5bc0de;
 }
 .tile.current-tile {
+    padding: 2em;
+    margin: 0.5em;
+    border-radius: 10px;
     background: #f89406;
 }
 .tile:hover {
