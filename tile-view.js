@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    // keycode of 'T' on keyboard
+    var T = 84;
+
     if ($('div#tile_view').length > 0) {
         var tile_view = $('div#tile-view-mode');
     } else {
@@ -10,7 +13,6 @@ $(document).ready(function() {
     // bind keyboard 't' to toggle tile_view
     tile_view.hide();
     $('body').keyup(function (event) {
-        var T = 84;
         if (event.which == T) {
             tile_view.toggle();
             slide_show.toggle();
@@ -52,6 +54,15 @@ $(document).ready(function() {
 
             $(this).appendTo(tile_container);
             tile_container.appendTo(tile_view);
+        });
+
+        // bind click to play from here
+        slides.click(function() {
+            // exit from tile view mode
+            $('body').trigger($.Event('keyup', { which: T }));
+
+            var index = slides.index($(this));
+            slideshow.gotoSlide(index + 1);
         });
 
         tile_view.appendTo($('body'));
