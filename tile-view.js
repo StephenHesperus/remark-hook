@@ -16,6 +16,16 @@ $(document).ready(function() {
         if (event.which == T) {
             tile_view.toggle();
             slide_show.toggle();
+
+            var current_slide = slide_show.find('.remark-visible');
+            var index = slide_show.find('.remark-slide-container')
+                                  .index(current_slide);
+            var current_tile = tile_view.find('.remark-slide-container')
+                                        .eq(index).parent().parent();
+            var prev_tile = tile_view.find('.current-tile');
+            if (prev_tile.length > 0)
+                prev_tile.removeClass('current-tile');
+            current_tile.addClass('current-tile');
         }
     });
 
