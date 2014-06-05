@@ -63,7 +63,7 @@ $(document).ready(function() {
                 '.remark-slide-container:lt(' + index + ')')
                     .parent().parent();
 
-            tile_view.find('.tile').removeClass('current-tile displayed-tiles');
+            tile_view.find('.tile').removeClass('current-tile displayed-tile');
             displayed_tiles.addClass('displayed-tile');
             current_tile.addClass('current-tile');
             current_tile.get(0).scrollIntoView();
