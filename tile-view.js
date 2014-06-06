@@ -22,10 +22,12 @@ $(document).ready(function() {
             var current_tile = tile_view.find('.remark-slide-container')
                                         .eq(index).parent().parent();
             var displayed_tiles = tile_view.find(
-                '.remark-slide-container:lt(' + index + ')')
-                    .parent().parent();
+                // current tile and those before it
+                '.remark-slide-container:lt(' + (index+1) + ')')
+                    .parent().parent().parent();
 
-            tile_view.find('.tile').removeClass('current-tile displayed-tile');
+            tile_view.find('.tile-bg').removeClass('displayed-tile');
+            tile_view.find('.tile').removeClass('current-tile');
             displayed_tiles.addClass('displayed-tile');
             current_tile.addClass('current-tile');
             current_tile.get(0).scrollIntoView();
@@ -55,8 +57,10 @@ $(document).ready(function() {
         // loop all slides and set the scale and container
         var slides = slides_area.find('.remark-slide-container');
         slides.each(function (index) {
-            var tile = $('<div class="tile">');
-            var tile_container = $('<div class="tile-container">');
+            var tile = $('<div class="tile-bg">'
+                         + '<div class="tile">'
+                         + '<div class="tile-container">');
+            var tile_container = tile.find('.tile-container');
 
             tile_container.width(tile_container_width);
             tile_container.height(tile_container_height);
@@ -67,7 +71,6 @@ $(document).ready(function() {
             remark_slide_scaler.parent().addClass('remark-visible');
 
             $(this).appendTo(tile_container);
-            tile_container.appendTo(tile);
             tile.appendTo(tile_view);
         });
 
