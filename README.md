@@ -9,15 +9,15 @@ version of markdown, go and check it out.
 
 ## Features
 
-## __New Features__
-
-### Tile View Mode
+### Tile View Mode (New Feature)
 
 Tile view mode shows all slides of a slide show. Click on a slide, the
 slide show will go on from that slide. Use keyboard 'T' to toggle
 between tile view mode and play mode.
 
-### 1. highlighting a whole line
+### Highlight in Code Blocks
+
+#### 1. highlighting a whole line
 
 Just change the first character of the line to `!`.
 
@@ -33,7 +33,7 @@ def say_hello():
 <strong style="border: 1px solid red;">    print('Hello, world!');</strong>
 </pre>
 
-### 2. highlighting tokens
+#### 2. highlighting tokens
 
 Use this format: <strong>`` `highlighted tokens` ``</strong>.
 
@@ -49,12 +49,12 @@ It will display as:
     print(<strong>'Hello, world!', continued_highlight</strong>)
 </pre>
 
-### 3. escaped back-quotes
+#### 3. escaped back-quotes
 
 Use this format: <strong>`` \`escaped back-quotes\` ``</strong>.
 
 
-### 4. customize highlighting style
+#### 4. customize highlighting style
 
 * highlighted lines
 Define rules for the class `remark-code-line-highlighted`.
