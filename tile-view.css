@@ -9,41 +9,33 @@
 h1#tile-view-header {
     margin-left: 2em;
 }
-.tile {
-    position: relative;
-    display: inline-table;
-    padding: 2em;
-    margin: 0.5em;
-    border-radius: 10px;
-}
-.tile.displayed-tile {
-    padding: 2.5em;
+.tile-bg {
+    float: left;
+    padding: 0.5em;
     margin: 0em;
     border-radius: 0px;
+    display: inline-table;
+}
+.tile-bg.displayed-tile {
     background: #5bc0de;
 }
-.tile.current-tile {
-    padding: 2em;
+.tile {
+    position: relative;
+    padding: 1em;
     margin: 0.5em;
     border-radius: 10px;
+}
+.tile.current-tile {
     background: #f89406;
 }
 .tile:hover {
     background: #049cdb;
-    padding: 2em;
-    margin: 0.5em;
-    border-radius: 10px;
 }
 .tile:active {
     background: #2f96b4;
-    padding: 2em;
-    margin: 0.5em;
-    border-radius: 10px;
 }
+/* tile container width, height is set using inline style in javascript */
 .tile-container {
     position: relative;
-    float: left;
-    /* border: 10px solid blueviolet; */
-    /* border: 10px solid rgba(0, 33, 55, 0.5); */
     box-shadow: 5px 5px 10px black;
 }
