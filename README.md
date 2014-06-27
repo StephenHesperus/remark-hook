@@ -15,9 +15,9 @@ Tile view mode shows all slides of a slide show. Click on a slide, the
 slide show will go on from that slide. Use keyboard 'T' to toggle
 between tile view mode and play mode.
 
-### Highlight in Code Blocks
+### Highlighting in Code Blocks
 
-#### 1. highlighting a whole line
+#### 1. Highlight a whole line
 
 Just change the first character of the line to `!`.
 
@@ -26,14 +26,14 @@ Just change the first character of the line to `!`.
     !   print('Hello, world!');
     ```
 
-It will display as (the highlighted style can be customized):
+It will display as (the highlighting style can be customized):
 
 <pre>
 def say_hello():
 <strong style="border: 1px solid red;">    print('Hello, world!');</strong>
 </pre>
 
-#### 2. highlighting tokens
+#### 2. Highlight tokens
 
 Use this format: <strong>`` `highlighted tokens` ``</strong>.
 
@@ -49,12 +49,12 @@ It will display as:
     print(<strong>'Hello, world!', continued_highlight</strong>)
 </pre>
 
-#### 3. escaped back-quotes
+#### 3. Use escaped back-quotes
 
 Use this format: <strong>`` \`escaped back-quotes\` ``</strong>.
 
 
-#### 4. customize highlighting style
+#### 4. Customize highlighting style
 
 * highlighted lines
 Define rules for the class `remark-code-line-highlighted`.
